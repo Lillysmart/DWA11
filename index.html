@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="store.js" defer type="module"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
     
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.10.0/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.10.0/cdn/shoelace-autoloader.js"
+    ></script>
+    <script src="script.js" defer type="module"></script>
+    <script src="model/reducer.js" defer type="module"></script>
+    <script src="model/store.js" defer type="module"></script>
+
+  </head>
+  
+  <body>
+    <header class="header">
+      <h1 class="header_title">Tally Count</h1>
+    </header>
+    <aside class="controls">
+      <label>
+        <select>
+          <option>Counter 1</option>
+          <option>Counter 2</option>
+          <option>Counter 3</option>
+        </select>
+      </label>
+      <label>
+        <span> Counter </span>
+        <select></select>
+      </label>
+      <button>Settings</button>
+    </aside>
+    <main class="counter">
+      <input class="counter__value" data-key="number" readonly value="0" />
+      <div class="counter__actions">
+        <sl-button class="counter__button counter__button_first" size="large" data-key="subtract"
+        ><sl-icon name="dash"></sl-icon
+      ></sl-button>
+          <sl-button  class="counter__button" size="large" data-key="add" >
+            <sl-icon name="plus"></sl-icon>
+
+          </sl-button>           
+           <sl-button class="counter__button" size="large" data-key="reset">
+  Reset
+</sl-button>
+
+      </div>
+      
+    </main>
+
+    <footer class="footer">
+      Inspired by
+      <a class="footer_link" href="https://tallycount.app/"> Tally Count</a
+      >.Note that this is a merely a student practice project for Jvascript
+    </footer>
+  </body>
+
+    <!-- <div class="container">
+      <sl-button size="large" pill class="counter">Counter</sl-button>
+      <div class="button-container">
+      
+      
+      
+    </div>
+    </div> -->
+
+  
 </html>
